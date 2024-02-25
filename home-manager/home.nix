@@ -7,6 +7,7 @@
     ./wrapper.nix
     ./git.nix
     ./pdf.nix
+    ./vm.nix
 
     ./shell
     ./nvim
@@ -32,6 +33,7 @@
     homeDirectory = "/home/meh";
 
     packages = with pkgs; [
+      quickemu
       krita
       brillo
       libsForQt5.kdenlive
