@@ -7,7 +7,6 @@
     ./wrapper.nix
     ./git.nix
     ./pdf.nix
-    ./vm.nix
 
     ./shell
     ./nvim
