@@ -28,8 +28,8 @@
       shellAliases = {
         "ac" = "arduino-cli";
         "f" = "fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'";
-        "rebuild-home" = "home-manager switch --flake";
-        "rebuild-system" = "sudo nixos-rebuild switch --flake";
+        "home-rebuild" = "home-manager switch --flake";
+        "system-rebuild" = "sudo nixos-rebuild switch --flake";
       };
     };
 

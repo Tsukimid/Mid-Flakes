@@ -32,7 +32,7 @@
     homeDirectory = "/home/meh";
 
     packages = with pkgs; [
-      quickemu
+      gparted
       krita
       brillo
       libsForQt5.kdenlive
