@@ -7,6 +7,7 @@
     ./wrapper.nix
     ./git.nix
     ./pdf.nix
+    ./pass.nix
 
     ./shell
     ./nvim
@@ -39,6 +40,7 @@
       vlc
       fritzing
       alacritty
+      vial
 
       #waylandScreenshot
       grim
