@@ -18,9 +18,9 @@
   };
   
   services = {
+    libinput.enable = true;
     xserver = {
       enable = true;
-      libinput.enable = true;
 
 
       displayManager = {
@@ -34,11 +34,19 @@
     };
 
     blueman.enable = true;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
   };
 
+  programs.system-config-printer.enable = true;
+
   # Sound
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  # hardware.pulseaudio.enable = true;
+  # hardware.pulseaudio.support32Bit = true;
 
   # Brightness
   hardware.brillo.enable = true;
@@ -47,6 +55,12 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true; 
+  };
+
+  # OpenTablet
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
   };
 
   environment.systemPackages = [ 

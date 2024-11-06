@@ -34,6 +34,7 @@
     ]; */
 
     config = {
+      cudaSupport = true;
       allowUnfree = true;
       permittedInsecurePackages = [
         "electron-25.9.0"
@@ -80,6 +81,7 @@
       "wheel"
       "dialout"
       "video"
+      "docker"
       ];
 
       shell = pkgs.zsh;
@@ -109,11 +111,6 @@
     NIXOS_OZONE_WL = "1";
   }; 
 
-  programs.firefox = {
-    enable = true;
-    package = pkgs.floorp;
-  };
-  
   programs.ssh.askPassword = "";
 
   environment.systemPackages = with pkgs; [
@@ -122,6 +119,7 @@
     neovim
     wget
     git
+    floorp
 
     #wayland
     waybar
@@ -130,6 +128,9 @@
     rofi-wayland
   ];
 
+  services.udev.packages = with pkgs; [
+    via
+  ];
 
   # This setups a SSH server. Very important if you're setting up a headless system.
   # Feel free to remove if you don't need it.

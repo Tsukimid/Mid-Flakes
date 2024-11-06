@@ -10,6 +10,5 @@
     jetbrains-mono
     liberation_ttf
     font-awesome
-    nerdfonts
   ];
 }

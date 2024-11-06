@@ -97,7 +97,7 @@
     enable = true;
     platformTheme.name = "gtk";
     style = {
-      name = "Tokyonight-Dark-Borderless";
+      name = "Tokyonight-Dark-BL-MB";
     };
   };
 
