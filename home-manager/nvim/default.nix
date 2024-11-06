@@ -21,6 +21,7 @@
       pkgs.gnumake
       pkgs.cargo
       pkgs.unzip
+      pkgs.cmake
    ];
 
     sessionVariables = {

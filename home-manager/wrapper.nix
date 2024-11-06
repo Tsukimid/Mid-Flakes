@@ -12,16 +12,10 @@
             "--disable-gpu"
           ];
         };
-        wrappers.vesktop = {
-          basePackage = pkgs.vesktop;
-          flags = [
-            "--disable-gpu"
-          ];
-        };
-        wrappers.audacity = {
-          basePackage = pkgs.audacity;
-          env.GTK_THEME.value = "Don't affect Audacity";
-        };
+        #wrappers.kicad = {
+        # basePackage = pkgs.kicad;
+        # env.GTK_THEME.value = "Don't affect Audacity";
+        #};
       }];
     })
   ];

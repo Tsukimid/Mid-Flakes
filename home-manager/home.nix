@@ -2,15 +2,15 @@
 , ...
 }: {
   imports = [
-    ./spotify.nix
+    #    ./spotify.nix
     ./dunst.nix
     ./wrapper.nix
     ./git.nix
     ./pdf.nix
-    ./pass.nix
 
     ./shell
     ./nvim
+    ./theming
   ];
 
   nixpkgs = {
@@ -40,7 +40,9 @@
       vlc
       fritzing
       alacritty
+      gnutls
       vial
+      docker
 
       #waylandScreenshot
       grim
@@ -65,11 +67,6 @@
       nsxiv
       xfce.thunar
 
-      blender
-      komga
-      kavita
-      
-      etcher
     ];
 
     pointerCursor = {
@@ -86,26 +83,30 @@
 
   gtk = {
     enable = true;
-    theme = {
-      name = "Tokyonight-Dark-BL";
-      package = pkgs.tokyo-night-gtk;
-    };
+    # theme = {
+    #   package = pkgs.tokyonight-gtk-theme.override {
+    #     colorVariants = [ "dark" ];
+    #     tweakVariants = [ "macos" "black" ];
+    #   };
+    #   name = "Tokyonight-Dark-Compact";
+    # };
   };
 
   qt = {
     enable = true;
-    platformTheme = "gtk";
+    platformTheme.name = "gtk";
     style = {
-      name = "Tokyonight-Dark-BL";
+      name = "Tokyonight-Dark-Borderless";
     };
   };
 
   programs = {
     kitty = {
       enable = true;
-      theme = "Tokyo Night";
+      themeFile = "tokyo_night_night";
       extraConfig = ''
-        background_opacity 0.978
+        background_opacity 0.977
+        enable_audio_bell no
       '';
     };
     # neovim = {

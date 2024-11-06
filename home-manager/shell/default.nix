@@ -81,19 +81,14 @@
 
     eza = {
       enable = true;
-      icons = true;
+      icons = "auto";
       git = true;
-      enableAliases = true;
-      extraOptions = [
-        "--sort"
-        "type"
-      ];
     };
 
-    thefuck = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+    # thefuck = {
+    #   enable = true;
+    #   enableZshIntegration = true;
+    # };
 
     ripgrep = {
       enable = true;
