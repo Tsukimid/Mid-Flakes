@@ -2,6 +2,19 @@
 , ...
 }: {
   xdg.configFile = {
-    "gtk-3.0".source = ./theming/tokyonight-BL-MB-Dark/gtk-3.0;
+    "gtk-2.0" = {
+      source = ./Tokyonight-Dark/gtk-2.0;
+      recursive = true;
+    };
+
+    "gtk-3.0" = {
+      source = ./Tokyonight-Dark/gtk-3.0;
+      recursive = true;
+    };
+
+    "gtk-4.0" = {
+      source = ./Tokyonight-Dark/gtk-4.0;
+      recursive = true;
+    };
   };
 }

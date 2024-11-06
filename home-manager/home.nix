@@ -83,6 +83,7 @@
 
   gtk = {
     enable = true;
+    theme.name = "Tokyonight-Dark-BL-MB";
     # theme = {
     #   package = pkgs.tokyonight-gtk-theme.override {
     #     colorVariants = [ "dark" ];
