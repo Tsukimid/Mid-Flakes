@@ -44,10 +44,6 @@
 
   programs.system-config-printer.enable = true;
 
-  # Sound
-  # hardware.pulseaudio.enable = true;
-  # hardware.pulseaudio.support32Bit = true;
-
   # Brightness
   hardware.brillo.enable = true;
 
@@ -66,5 +62,7 @@
   environment.systemPackages = [ 
     pkgs.system-config-printer 
     pkgs.pavucontrol
+
+    pkgs.pulseaudioFull
   ];
 }

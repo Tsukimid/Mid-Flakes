@@ -10,7 +10,8 @@
     ./fonts.nix
     ./nvidia.nix
     ./general.nix
-    ./vm.nix
+    ./stylix
+    # ./vm.nix
 
     ./hardware-configuration.nix
   ];

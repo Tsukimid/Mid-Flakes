@@ -51,7 +51,7 @@
       ];
       colors = {
         fg = "#c0caf5";
-        bg = "#1a1b26";
+        bg = "#16161e";
         hl = "#bb9af7";
         "fg+" = "#c0caf5";
         "bg+" = "#1a1b26";

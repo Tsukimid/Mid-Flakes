@@ -5,7 +5,7 @@
   ...
 }:
   let 
-    spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
   in
 {
   home.packages = [ pkgs.playerctl ];
@@ -54,5 +54,5 @@
   
   services.playerctld.enable = true;
 
-  imports = [ inputs.spicetify-nix.homeManagerModule ];
+  imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 }

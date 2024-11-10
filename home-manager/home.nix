@@ -2,7 +2,7 @@
 , ...
 }: {
   imports = [
-    #    ./spotify.nix
+    ./spotify.nix
     ./dunst.nix
     ./wrapper.nix
     ./git.nix
@@ -67,6 +67,10 @@
       nsxiv
       xfce.thunar
 
+      obs-studio
+      kicad
+      lxqt.lxqt-config
+      xsettingsd
     ];
 
     pointerCursor = {
@@ -83,7 +87,7 @@
 
   gtk = {
     enable = true;
-    theme.name = "Tokyonight-Dark-BL-MB";
+    theme.name = "Tokyonight-Dark";
     # theme = {
     #   package = pkgs.tokyonight-gtk-theme.override {
     #     colorVariants = [ "dark" ];
@@ -97,7 +101,7 @@
     enable = true;
     platformTheme.name = "gtk";
     style = {
-      name = "Tokyonight-Dark-BL-MB";
+      name = "Tokyonight-Dark";
     };
   };
 
@@ -106,6 +110,7 @@
       enable = true;
       themeFile = "tokyo_night_night";
       extraConfig = ''
+        font_family JetBrainsMono Nerd Font
         background_opacity 0.977
         enable_audio_bell no
       '';

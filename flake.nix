@@ -12,7 +12,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    spicetify-nix.url = "github:the-argus/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }; 
     
     ags.url = "github:Aylur/ags";
 
@@ -20,6 +23,8 @@
       url = "github:folke/tokyonight.nvim";
       flake = false;
     };
+    
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = {
@@ -60,7 +65,11 @@
     nixosConfigurations = {
       stupidslap = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
-        modules = [ ./nixos/configuration.nix ];
+        modules = [ 
+          ./nixos/configuration.nix
+          inputs.stylix.nixosModules.stylix
+          ];
+            
       };
     };
 
