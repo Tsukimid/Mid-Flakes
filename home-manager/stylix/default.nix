@@ -1,8 +1,21 @@
 {
   pkgs, 
+  stylix,
   inputs, 
+  lib,
   ... 
 }: { 
+  gtk = {
+    enable = true;
+    # theme.name = lib.mkForce "Tokyonight-Dark";
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+  };
+  qt.enable = true;
 
   stylix = {
     base16Scheme = {
@@ -25,19 +38,17 @@
     };
     image = ./wall1.jpg;
     
-    autoEnable = false;
     enable = true;
+    autoEnable = false;
+    targets = {
+      gtk.enable = true;
+      xresources.enable = true;
+    };
 
     cursor = {
       name = "Bibata-Modern-Ice";
       package = pkgs.bibata-cursors;
       size = 24;
-    };
-
-    targets = {
-      gnome.enable = true;
-      grub.enable = true;
-      console.enable = true;
     };
   };
 }

@@ -33,6 +33,17 @@
       };
     };
 
+    kitty = {
+      enable = true;
+      themeFile = "tokyo_night_night";
+      extraConfig = ''
+        font_family JetBrainsMono Nerd Font
+        font_size 11.5
+        background_opacity 0.977
+        enable_audio_bell no
+      '';
+    };
+
     btop = {
       enable = true;
       settings = {
@@ -50,14 +61,14 @@
         "--border"
       ];
       colors = {
-        fg = "#c0caf5";
-        bg = "#16161e";
-        hl = "#bb9af7";
+        fg = "#545c7e";
+        bg = "#1a1b26";
+        hl = "#7aa2f7";
         "fg+" = "#c0caf5";
-        "bg+" = "#1a1b26";
+        "bg+" = "#292e42";
         "hl+" = "#7dcfff";
         border = "#c0caf5";
-        info = "#7aa2f7";
+        info = "#bb9af7";
         prompt = "#7dcfff";
         pointer = "#7dcfff";
         marker = "#9ece6a";
@@ -68,27 +79,18 @@
 
     bat = {
       enable = true;
-      themes = {
-        Tokyo-night = {
-          src = inputs.bats-theme;
-          file = "./extras/sublime/tokyonight_night.tmTheme";
-        };
-      };
-      config = {
-        theme = "Tokyo-night";
-      };
     };
 
     eza = {
       enable = true;
+      enableZshIntegration = true;
       icons = "auto";
       git = true;
+      extraOptions = [
+        "--sort=extension"
+        "--group-directories-first"
+      ];  
     };
-
-    # thefuck = {
-    #   enable = true;
-    #   enableZshIntegration = true;
-    # };
 
     ripgrep = {
       enable = true;

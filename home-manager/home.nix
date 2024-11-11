@@ -1,4 +1,5 @@
-{ pkgs
+{ pkgs,
+  lib
 , ...
 }: {
   imports = [
@@ -10,7 +11,7 @@
 
     ./shell
     ./nvim
-    ./theming
+    ./stylix
   ];
 
   nixpkgs = {
@@ -69,59 +70,20 @@
 
       obs-studio
       kicad
-      lxqt.lxqt-config
-      xsettingsd
     ];
-
-    pointerCursor = {
-      name = "Bibata-Modern-Ice";
-      package = pkgs.bibata-cursors;
-      size = 24;
-      gtk.enable = true;
-      x11 = {
-        enable = true;
-        defaultCursor = "Bibata-Modern-Ice";
-      };
-    };
   };
 
   gtk = {
     enable = true;
-    theme.name = "Tokyonight-Dark";
-    # theme = {
-    #   package = pkgs.tokyonight-gtk-theme.override {
-    #     colorVariants = [ "dark" ];
-    #     tweakVariants = [ "macos" "black" ];
-    #   };
-    #   name = "Tokyonight-Dark-Compact";
-    # };
   };
 
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
-    style = {
-      name = "Tokyonight-Dark";
-    };
-  };
-
-  programs = {
-    kitty = {
-      enable = true;
-      themeFile = "tokyo_night_night";
-      extraConfig = ''
-        font_family JetBrainsMono Nerd Font
-        background_opacity 0.977
-        enable_audio_bell no
-      '';
-    };
-    # neovim = {
-    #   plugins = with pkgs.vimPlugins; {
-    #     nvim-treesitter.withAllGrammars
-    #   };
+    # platformTheme.name = "gtk";
+    # style = {
+    #   name = "Tokyonight-Dark";
     # };
   };
-
 
   # Enable home-manager and git
   programs.home-manager.enable = true;

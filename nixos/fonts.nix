@@ -10,7 +10,6 @@
     jetbrains-mono
     liberation_ttf
     font-awesome
-    # (nerdfonts.override { fonts = ["JetBrainsMono" "Iosevka" ];})
-    nerdfonts
+    (nerdfonts.override { fonts = ["JetBrainsMono" "Iosevka" ];})
   ];
 }

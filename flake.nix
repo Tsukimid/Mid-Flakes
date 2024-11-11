@@ -31,6 +31,7 @@
     self,
     nixpkgs,
     home-manager,
+    stylix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -77,7 +78,10 @@
       "meh@stupidslap" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = { inherit inputs outputs; };
-        modules = [ ./home-manager/home.nix ];
+        modules = [ 
+          stylix.homeManagerModules.stylix
+          ./home-manager/home.nix 
+          ];
       };
     };
   };
