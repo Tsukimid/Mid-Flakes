@@ -5,7 +5,7 @@
   imports = [
     ./spotify.nix
     ./dunst.nix
-    ./wrapper.nix
+    # ./wrapper.nix
     ./git.nix
     ./pdf.nix
 
@@ -52,6 +52,7 @@
       grimblast
       swww
 
+      discord
       telegram-desktop
       pdfarranger
 
@@ -62,6 +63,7 @@
       arduino-cli
       playerctl
       arduino
+      audacity
 
       neofetch
       lf
