@@ -18,6 +18,9 @@
   qt = {
     enable = true;
     platformTheme.name = "gtk";
+    style = {
+      name = "adw-gtk3";
+    };
   };
 
   stylix = {
