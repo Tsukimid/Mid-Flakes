@@ -15,7 +15,10 @@
       gtk-application-prefer-dark-theme = 1;
     };
   };
-  qt.enable = true;
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk";
+  };
 
   stylix = {
     base16Scheme = {
