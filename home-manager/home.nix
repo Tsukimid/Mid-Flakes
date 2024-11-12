@@ -5,7 +5,7 @@
   imports = [
     ./spotify.nix
     ./dunst.nix
-    # ./wrapper.nix
+    ./wrapper.nix
     ./git.nix
     ./pdf.nix
 
