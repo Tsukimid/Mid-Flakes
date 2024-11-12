@@ -37,7 +37,6 @@
       gparted
       krita
       brillo
-      libsForQt5.kdenlive
       vlc
       fritzing
       alacritty
@@ -63,7 +62,6 @@
       arduino-cli
       playerctl
       arduino
-      audacity
 
       neofetch
       lf
