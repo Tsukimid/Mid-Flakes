@@ -10,10 +10,10 @@
           basePackage = pkgs.libsForQt5.kdenlive;
           env.GTK_THEME.value = "Don't affect kdenlive";
         };
-        wrappers.audacity = {
-          basePackage = pkgs.audacity;
-          env.GTK_THEME.value = "Don't affect Audacity";
-        };
+        # wrappers.audacity = {
+        #   basePackage = pkgs.audacity;
+        #   env.GTK_THEME.value = "Don't affect Audacity";
+        # };
       }];
     })
   ];

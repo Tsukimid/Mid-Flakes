@@ -70,6 +70,7 @@
 
       obs-studio
       kicad
+      audacity
     ];
   };
 
