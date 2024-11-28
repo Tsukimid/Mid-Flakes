@@ -30,6 +30,7 @@
         "f" = "fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'";
         "home-rebuild" = "home-manager switch --flake";
         "system-rebuild" = "sudo nixos-rebuild switch --flake";
+        "sat" = "zathura";
       };
     };
 
