@@ -17,7 +17,6 @@
   home = {
     packages = [
       pkgs.gcc
-      pkgs.libstdcxx5
       pkgs.gnumake
       pkgs.cargo
       pkgs.unzip

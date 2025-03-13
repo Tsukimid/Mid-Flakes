@@ -69,6 +69,8 @@
     efi.canTouchEfiVariables = true;
   };
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
   users.defaultUserShell = pkgs.zsh;
   users.users = {
     meh = {

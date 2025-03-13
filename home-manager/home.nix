@@ -51,7 +51,6 @@
       grimblast
       swww
 
-      discord
       telegram-desktop
       pdfarranger
 
@@ -71,6 +70,8 @@
       obs-studio
       kicad
       audacity
+
+      pspp
     ];
   };
 

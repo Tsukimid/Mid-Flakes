@@ -14,6 +14,12 @@
         #   basePackage = pkgs.audacity;
         #   env.GTK_THEME.value = "Don't affect Audacity";
         # };
+        wrappers.discord = {
+          basePackage = pkgs.discord;
+          flags = [
+            "--disable-gpu"
+          ];
+        };
       }];
     })
   ];
