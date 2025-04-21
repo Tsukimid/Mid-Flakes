@@ -4,6 +4,7 @@
 }:
 {
   time.timeZone = "Asia/Manila";
+  time.hardwareClockInLocalTime = false;
   i18n.defaultLocale = "en_PH.UTF-8";
   i18n.extraLocaleSettings = {
    LC_ADDRESS = "en_PH.UTF-8";
@@ -16,8 +17,14 @@
    LC_TELEPHONE = "en_PH.UTF-8";
    LC_TIME = "en_PH.UTF-8";
   };
+
+  networking.timeServers = ["0.pool.ntp.org" "1.pool.ntp.org" "2.pool.ntp.org" "3.pool.ntp.org"];
   
   services = {
+    timesyncd = {
+      enable = true;
+      servers = [ "0.pool.ntp.org" "1.pool.ntp.org" "2.pool.ntp.org" "3.pool.ntp.org" ];
+    };
     libinput.enable = true;
     xserver = {
       enable = true;
